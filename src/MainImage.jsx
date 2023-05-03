@@ -5,7 +5,7 @@ export default function MainImage() {
 
     const ContainerImage = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
                         // after에 만들어서 블러 같은 효과를 준다.
@@ -31,31 +31,38 @@ export default function MainImage() {
 
     const MainTitle = styled.div`
     position: absolute;
-    font-weight: 900;
-    font-size: 90px;
     transform: translate(-50%, -50%);
     top: 40%;
     left: 50%;
     z-index: 99;
-    color: #1ed760;
     margin-top: 20px;
+
+    font-size: 146px;
+    color: #1ed760;
+    font-weight: 900;
     `
 
     const SubTitle = styled.div`
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     color: #1ed760;
+    `
+
+    const Left = styled.div`
+    position: relative;
+    left: -1.5em;
     `
 
     return ( 
         <ContainerImage>
             <MainImages src="https://www-growth.scdn.co/static/home/bursts.svg" alt="메인이미지"/>
             <MainTitle>
-                <div>Listening is</div>
+                <Left>Listening is</Left>
                 <div>everything</div>
                 <SubTitle>Millions of songs and podcasts. No credit card needed.</SubTitle>
             </MainTitle>
+            
         </ContainerImage>
     )
 }
